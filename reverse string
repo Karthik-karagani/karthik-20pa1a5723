@@ -1,0 +1,24 @@
+class Solution {
+    public int reverse(int x) {
+int r;long res=0;
+String s=String.valueOf(x);
+StringBuffer s1=new StringBuffer(s);
+long sign=1;long d;
+if(s1.charAt(0)=='-'){
+sign=-1;
+s1.replace(0,1,"");
+}
+
+int x1=Integer.parseInt(s1.toString());
+        while(x1>0){
+        r=x1%10;
+        res=res*10+r;
+x1=x1/10;
+
+    }
+    d=res*sign;
+ if (d < Integer.MIN_VALUE || d > Integer.MAX_VALUE) {
+            return 0;
+        }
+    return (int)d;}
+}
