@@ -23,7 +23,10 @@ class Solution {
      }
         
         return result*d;
-        
+        if(result>Integer.Max_Value){
+        return Integer.Max_Value;}
+         if(result<Integer.Min_Value){
+        return Integer.Min_Value;}
         
     }
 }
